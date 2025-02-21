@@ -5,105 +5,110 @@
   box-sizing: border-box;
 }
 
-/* Container */
+/* Body Styling */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
   padding: 1rem;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
-/* Header */
-header {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-header h1 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-header p {
-  font-size: 1rem;
-}
-
-/* Grid Layout for Main Content */
-main {
+/* Container */
+.container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
-  main {
+  .container {
     grid-template-columns: 1fr 2fr;
   }
 }
 
 /* Section Styling */
 section {
+  background-color: #fff;
   padding: 1rem;
-  border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  color: #007BFF;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
 }
 
-/* List Styling */
+/* Contact Links */
+.contact a {
+  display: block;
+  color: #007BFF;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Text */
+section p, section ul {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 ul {
   list-style: square inside;
+  padding: 0;
 }
 
 li {
   margin-bottom: 0.5rem;
 }
 
-/* Link Styling */
-a {
-  text-decoration: none;
-  color: #007BFF;
+/* Header Styling */
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-a:hover {
-  text-decoration: underline;
+header h1 {
+  font-size: 2rem;
+  color: #333;
 }
 
-/* Contact and About Sections */
+header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Grid Balancing */
 .contact, .about {
-  text-align: left;
+  padding: 1rem;
 }
 
-.contact a {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-/* Responsive Adjustments */
 @media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
   header h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   header p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   section {
     padding: 0.8rem;
-  }
-
-  section h2 {
-    font-size: 1rem;
   }
 }
