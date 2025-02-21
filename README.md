@@ -14,10 +14,6 @@ Welcome to the **My Digital Resume** repository! This project showcases my profe
 - **HTML5**: For the structure of the resume.
 - **CSS3**: For styling and responsiveness.
 
-## Preview
-
-![Preview of the Digital Resume](https://via.placeholder.com/960x540.png?text=Digital+Resume+Preview)
-
 ## Installation
 
 1. Clone the repository:
@@ -61,10 +57,6 @@ You can host this project on **GitHub Pages** to share your resume easily. Follo
 1. Go to your repository settings.
 2. Under the "Pages" section, select the source branch (usually `main`).
 3. Save the settings, and your resume will be live at `https://<your-username>.github.io/My-Digital-Resume/`.
-
-## License
-
-This project is licensed under the MIT License. Feel free to use and customize it for your personal use.
 
 ## Contact
 
