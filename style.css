@@ -1,4 +1,4 @@
-/* General Reset */
+/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
@@ -14,18 +14,19 @@ body {
   color: #333;
 }
 
-/* Container */
+/* Main Container */
 .container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
+/* Responsive Grid for Smartphones */
+@media (max-width: 768px) {
   .container {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -37,16 +38,16 @@ section {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Headings */
 section h2 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: #007BFF;
-  text-align: center;
   border-bottom: 1px solid #ddd;
   padding-bottom: 0.5rem;
 }
 
-/* Contact Links */
+/* Contact Links Styling */
 .contact a {
   display: block;
   color: #007BFF;
@@ -59,7 +60,7 @@ section h2 {
   text-decoration: underline;
 }
 
-/* Responsive Text */
+/* Text Content */
 section p, section ul {
   font-size: 1rem;
   line-height: 1.5;
@@ -90,16 +91,12 @@ header p {
   color: #666;
 }
 
-/* Grid Balancing */
+/* Grid Balancing for Sections */
 .contact, .about {
   padding: 1rem;
 }
 
 @media (max-width: 768px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
-
   header h1 {
     font-size: 1.8rem;
   }
