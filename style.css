@@ -1,96 +1,96 @@
-/* Reset CSS */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    max-width: 960px;
+    margin: auto;
 }
 
-/* Body Styling */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f5f5f5;
-  color: #333;
-  padding: 1rem;
+h1 {
+    font-size: 3em;
+    letter-spacing: .6em;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
-/* Container Styling */
-.container {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap; /* Enable wrapping */
+h2 {
+    font-size: 1.5em;
+    padding-bottom: 1em;
 }
 
-/* Left Section */
-.left {
-  flex: 1;
-  max-width: 48%; /* For desktop */
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+h3 {
+    font-size: 1em;
+    padding-bottom: 1em;
 }
 
-/* Right Section */
-.right {
-  flex: 1;
-  max-width: 48%; /* For desktop */
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+main { 
+    display: grid;
+    grid-template-columns: 40% 60%; /* Default layout for desktop/tablets */
+    margin-top: 3em;
+}
+
+header {
+    text-align: center;
+    margin: auto 2em;
+}
+
+section {
+    margin: auto 1em 4em 2em;
+}
+
+i {
+    margin-right: .5em;
+}
+
+p {
+    margin: .2em auto;
+}
+
+hr {
+    border: none;
+    background-color: lightgray;
+    height: 1px;
+}
+
+h1, h2, h3 {
+    font-weight: 100;
+    margin-bottom: 0;
+}
+
+#mainLeft {
+    border-right: 1px solid lightgray;
 }
 
 /* Responsive Design for Smartphones */
 @media (max-width: 768px) {
-  .left,
-  .right {
-    max-width: 100%; /* Stack sections vertically */
-    margin-bottom: 1rem; /* Add spacing between sections */
-  }
+    body {
+        font-size: 14px; /* Increase font size for better readability */
+        margin: 0 1em; /* Add padding for small screens */
+    }
 
-  .container {
-    flex-direction: column; /* Vertical layout */
-  }
-}
+    main {
+        grid-template-columns: 1fr; /* Stack columns vertically */
+        margin-top: 1em;
+    }
 
-/* Section Heading Styling */
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #007BFF;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 0.5rem;
-}
+    #mainLeft {
+        border-right: none; /* Remove right border on small screens */
+        margin-bottom: 2em; /* Add spacing between sections */
+    }
 
-/* Contact Links Styling */
-.contact a {
-  display: block;
-  color: #007BFF;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-}
+    section {
+        margin: 0 0 2em 0; /* Adjust spacing for sections */
+    }
 
-.contact a:hover {
-  text-decoration: underline;
-}
+    h1 {
+        font-size: 2.5em; /* Scale heading size */
+        letter-spacing: .4em;
+    }
 
-/* List Styling */
-ul {
-  list-style: square inside;
-  padding: 0;
-}
+    h2 {
+        font-size: 1.2em;
+    }
 
-li {
-  margin-bottom: 0.5rem;
-}
-
-/* Text Styling */
-p {
-  font-size: 1rem;
-  line-height: 1.5;
+    h3 {
+        font-size: 1em;
+    }
 }
