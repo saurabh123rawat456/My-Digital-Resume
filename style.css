@@ -1,131 +1,109 @@
-/* Base Styles */
-body { 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 12px;
-    max-width: 960px;
-    margin: auto;
-    line-height: 1.6em;
-    color: #333;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-    font-size: 3em;
-    letter-spacing: .6em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    text-transform: uppercase;
+/* Container */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
-h2 {
-    font-size: 1.5em;
-    padding-bottom: 0.5em;
-    text-transform: uppercase;
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
 
-h3 {
-    font-size: 1em;
-    padding-bottom: 0.5em;
-    font-weight: bold;
-}
-
-main { 
-    display: grid;
-    grid-template-columns: 40% 60%;
-    gap: 1.5em;
-    margin-top: 3em;
-}
-
+/* Header */
 header {
-    text-align: center;
-    margin: auto 2em;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1rem;
+}
+
+/* Grid Layout for Main Content */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+/* Section Styling */
 section {
-    margin: auto 1em 4em 2em;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
 }
 
-i {
-    margin-right: .5em;
-    color: #666;
+section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
-p {
-    margin: .2em auto;
+/* List Styling */
+ul {
+  list-style: square inside;
 }
 
-hr {
-    border: none;
-    background-color: lightgray;
-    height: 1px;
-    margin: 1em 0;
+li {
+  margin-bottom: 0.5rem;
 }
 
-h1, h2, h3 {
-    font-weight: 100;
-    margin-bottom: 0;
-    color: #222;
-}
-
-#mainLeft {
-    border-right: 1px solid lightgray;
-}
-
+/* Link Styling */
 a {
-    text-decoration: none;
-    color: #007BFF;
-    transition: color 0.3s;
+  text-decoration: none;
+  color: #007BFF;
 }
 
 a:hover {
-    color: #0056b3;
+  text-decoration: underline;
 }
 
-/* Responsive Design */
+/* Contact and About Sections */
+.contact, .about {
+  text-align: left;
+}
+
+.contact a {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    body {
-        font-size: 14px;
-        padding: 0 1em;
-    }
+  header h1 {
+    font-size: 1.5rem;
+  }
 
-    header {
-        margin: auto 1em;
-        text-align: center;
-    }
+  header p {
+    font-size: 0.9rem;
+  }
 
-    main {
-        display: block; /* Switch to single-column layout */
-        margin: 2em 0;
-    }
+  section {
+    padding: 0.8rem;
+  }
 
-    section {
-        margin: auto 0 2em 0;
-    }
-
-    h1 {
-        font-size: 2em;
-        padding-top: 0.5em;
-    }
-
-    h2 {
-        font-size: 1.2em;
-    }
-
-    h3 {
-        font-size: 0.9em;
-    }
-
-    p, li {
-        font-size: 1em;
-        line-height: 1.5em;
-    }
-}
-
-/* Additional Touch-Friendly Interactions */
-a {
-    padding: 0.3em;
-}
-
-ul {
-    padding-left: 1.5em;
-    list-style: square;
+  section h2 {
+    font-size: 1rem;
+  }
 }
